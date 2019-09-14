@@ -14,7 +14,13 @@ $(document).ready(function () {
 
 
     // When click on the image, add it's assigned value to currentScore
-  
+    var currentScore = "";
+
+    $('img').on('click', function(){
+        var number = parseInt($(this).attr('value'));
+        console.log("number" + number);
+        
+    });
 
 
     // if currentScore = targetNumber win++
