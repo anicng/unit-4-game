@@ -7,16 +7,14 @@ $(document).ready(function () {
 
 
     // assign each img a value between 1-12
-    // .attr('',Math.floor(Math.random() * 10)+1)
+    $("#blueGem").attr('value',Math.floor(Math.random() * 12)+1);
+    $("#greenGem").attr('value',Math.floor(Math.random() * 12)+1);
+    $("#orangeGem").attr('value',Math.floor(Math.random() * 12)+1);
+    $("#redGem").attr('value',Math.floor(Math.random() * 12)+1);
 
 
-
-
-    // When click on the image, 
-    // $(".img").on('click', function(){
-    // add it's assigned value to currentScore
-
-    // });
+    // When click on the image, add it's assigned value to currentScore
+  
 
 
     // if currentScore = targetNumber win++
