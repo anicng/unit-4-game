@@ -19,6 +19,8 @@ $(document).ready(function () {
     var losses = 0;
 
     $("#current-score").text(currentScore);
+    $("#win-count").text(wins);
+    $("#losses-count").text(losses);
 
     $('img').on('click', function(){
         var number = parseInt($(this).attr('value'));
