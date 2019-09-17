@@ -15,6 +15,9 @@ $(document).ready(function () {
 
     // When click on the image, add it's assigned value to currentScore
     var currentScore = 0;
+    var wins = 0;
+    var losses = 0;
+
     $("#current-score").text(currentScore);
 
     $('img').on('click', function(){
@@ -24,20 +27,32 @@ $(document).ready(function () {
         // console.log ("currentScore" + currentScore);
         // show current score
         scoreCalculator(number);
+
     });
     // add the value of clicked images up and show at #current-score
     
     function scoreCalculator(numInput){
         currentScore = currentScore + numInput;
         $("#current-score").text(currentScore);
+        winCheck(currentScore);
+        $("#win-count").text(wins);
+        $("#losses-count").text(losses);
 
     };
 
 
     // if currentScore = targetNumber win++
-
-
     // if currentScore > targetNumber losses++
+    function winCheck(){
+        if (currentScore === targetNumber){
+            wins++;
+        }
+        if(currentScore > targetNumber) {
+            losses++;
+        }
+
+    };
+
 
 
 
