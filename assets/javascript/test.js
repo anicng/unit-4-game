@@ -1,13 +1,7 @@
 $(document).ready(
     function crystalGame() {
-        var targetNumber = generateTargetNumber();
-
         // generate a targetNumber between 19-120
-        function generateTargetNumber (){
-            var num =  Math.floor(Math.random() * 120) + 19;
-            console.log(num)
-            return num
-        };
+        var targetNumber = Math.floor(Math.random() * 120) + 19;
         console.log("targetNumber:" + targetNumber);
         // display on target-number id
         $("#target-number").append(targetNumber);
@@ -52,21 +46,14 @@ $(document).ready(
             if (currentScore === targetNumber) {
                 wins++;
                 $("#alert").text("You Win!");
-                reset();
             } else if (currentScore > targetNumber) {
                 losses++;
                 $("#alert").text("You Lose!");
-                reset();
             }
-            
         };
 
-        function reset(){
-            currentScore = 0;
-            targetNumber = generateTargetNumber();
-            $("#target-number").text(targetNumber);
-            $("#current-score").text(currentScore);
-            // $("#alert").text("");
+        function resetScore(){
+            
         };
 
         // start new game
